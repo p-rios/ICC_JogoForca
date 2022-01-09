@@ -3,32 +3,34 @@ import imgs
 
 def Base():
     print(imgs.bemvindo)
-    arrayPalavra = ["c", "a", "c", "h", "o", "r", "r", "o"]
-
+   
+    palavra = "cachorro"
     arrayPrint = []
-    for i in arrayPalavra:
+    contador = 4
+    arrayLetras = []
+    fim = False
+    for i in palavra:
         arrayPrint.append("_")
-
+        arraytest = []
+    
     print(arrayPrint)
-    tentativa = input("Digite uma letra: ")
-    if ((tentativa in arrayPalavra)):
-        print("Acertou!")
+    
+    while (fim == False):
+     letra = input("Digite uma letra: ")
+ 
+     k = 0
+     while (k< len(palavra)):
+      if (letra == palavra[k]):
+        arrayletras = "".join(letra)
+        print(arrayLetras)
+            
+      else:
+        #  a.append("_")
+        arrayLetras = "".join("_") 
+     k+=1
+    print(array)
+     
 
-        for tentativa in arrayPalavra:
-            index = arrayPalavra.index(tentativa)-
-            print(index)
-
-        #  string = tentativa.replace(arrayPrint[index], tentativa)
-            arrayPrint[index] = tentativa
-            arrayPalavra[index:]
-
-#    elif  ((tentativa in arrayPalavra) == 2):
-
-        print(arrayPrint)
-    else:
-      #  print(imgs.errou)
-       #   string = tentativa.replace(arrayPrint[index], tentativa)
-        print("ERROOOOOOOOOOU")
-
+        
 
 Base()
