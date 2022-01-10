@@ -29,7 +29,7 @@ def Base():
         k = 0
 
         while (k < len(arrayPalavra)):
-            if ((letra == arrayPalavra[k]) and (letra not in arrayLetra)):
+            if ((letra == arrayPalavra[k])):
                 arrayPrint[k] = letra
 
             k += 1
