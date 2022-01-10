@@ -2,35 +2,52 @@ import imgs
 
 
 def Base():
+
     print(imgs.bemvindo)
-   
-    palavra = "cachorro"
+
+    arrayPalavra = ["c", "a", "c", "h", "o", "r", "r", "o"]
     arrayPrint = []
     contador = 4
-    arrayLetras = []
+    arrayLetra = []
     fim = False
-    for i in palavra:
-        arrayPrint.append("_")
-        arraytest = []
-    
-    print(arrayPrint)
-    
-    while (fim == False):
-     letra = input("Digite uma letra: ")
- 
-     k = 0
-     while (k< len(palavra)):
-      if (letra == palavra[k]):
-        arrayletras = "".join(letra)
-        print(arrayLetras)
-            
-      else:
-        #  a.append("_")
-        arrayLetras = "".join("_") 
-     k+=1
-    print(array)
-     
 
-        
+    for i in arrayPalavra:
+        arrayPrint.append("_")
+
+    print(arrayPrint)
+
+    while fim == False:
+
+        print(f"Voce tem : {contador} chances")
+
+        letra = input("Digite uma letra: ")
+
+        if (len(letra) != 1):
+            print("Opa, vc ñ digitou um caractere e afim de manter integridade do jogo estamos encerrando, contamos com a sua compreensão, a gerência")
+            break
+
+        k = 0
+
+        while (k < len(arrayPalavra)):
+            if ((letra == arrayPalavra[k]) and (letra not in arrayLetra)):
+                arrayPrint[k] = letra
+
+            k += 1
+
+        print(arrayPrint)
+
+        if (letra not in arrayPalavra):
+            contador -= 1
+
+        if (contador == 0):
+            fim = True
+
+            print(
+                "         YOU DIED \n OPA JOGO ERRADO, QUIS DIZER \n      >>GAME OVER<<")
+
+        if (arrayPrint == arrayPalavra):
+            fim = True
+            print("Parabéns vc venceu, brabo dmais!!!")
+
 
 Base()
